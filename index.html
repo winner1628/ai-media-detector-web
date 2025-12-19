@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Media Detector (Web)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Load TensorFlow.js (for AI detection) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.14.0/dist/tf.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Media Detector</h1>
+        <p>Upload an image to check if it’s AI-generated or real (JPG/PNG only)</p>
+
+        <!-- File Upload Section -->
+        <div class="upload-section">
+            <input type="file" id="image-upload" accept="image/jpeg, image/png">
+            <button id="detect-btn" disabled>Run AI Detection</button>
+        </div>
+
+        <!-- Image Preview -->
+        <div class="preview-section">
+            <img id="image-preview" src="" alt="Image Preview" hidden>
+        </div>
+
+        <!-- Progress & Results -->
+        <div class="progress-section">
+            <div id="progress-bar"></div>
+            <p id="status">Ready to upload</p>
+        </div>
+
+        <div class="results-section" hidden>
+            <h3>Detection Result:</h3>
+            <p id="result-text"></p>
+            <p id="confidence-text"></p>
+        </div>
+    </div>
+
+    <!-- Load app logic -->
+    <script src="js/app.js"></script>
+</body>
+</html>

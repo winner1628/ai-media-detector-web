@@ -1,1 +1,0 @@
-# ai-media-detector-web
